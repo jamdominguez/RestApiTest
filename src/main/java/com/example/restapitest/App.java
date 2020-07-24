@@ -20,7 +20,7 @@ public class App {
 
     @GetMapping("/hello")
     public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
-        String logMsg = String.format("hello - name[%s]", name)
+        String logMsg = String.format("hello - name[%s]", name);
         logger.info(logMsg);
         return String.format("Hello %s!", name);
     }
@@ -32,4 +32,10 @@ public class App {
         return String.format("Bye %s", name);
     }
 
+    @GetMapping("/jenkins")
+    public String jenkins(@RequestParam(value = "msg", defaultValue = "integration") String msg) {
+        String logMsg = String.format("jenkins - msg[%s]", msg);
+        logger.info(logMsg);
+        return String.format("Jenkins %s...", msg);
+    }
 }

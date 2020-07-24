@@ -36,6 +36,6 @@ public class App {
     public String jenkins(@RequestParam(value = "msg", defaultValue = "integration") String msg) {
         String logMsg = String.format("jenkins - msg[%s]", msg);
         logger.info(logMsg);
-        return String.format("Jenkins %s...", msg);
+        return String.format("Jenkins %s... service", msg);
     }
 }

@@ -19,14 +19,14 @@ public class App {
     }
 
     @GetMapping("/hello")
-    public String hello(@RequestParam(value = "name", defaultValue = "Rabo") String name) {
+    public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
         String logMsg = String.format("hello - name[%s]", name);
         logger.info(logMsg);
         return String.format("Hello %s!", name);
     }
 
     @GetMapping("/bye")
-    public String bye(@RequestParam(value = "name", defaultValue = "friend") String name) {
+    public String bye(@RequestParam(value = "name", defaultValue = "World") String name) {
         String logMsg = String.format("bye - name[%s]", name);
         logger.info(logMsg);
         return String.format("Bye %s", name);
